@@ -11,7 +11,7 @@ model_config["train"]["batch_size"] = 1000
 doc_retrieval = train_model(model_config)
 
 # Download all the SQuAD models
-squad = build_model(configs.squad.multi_squad_noans_infer, download = True)
+#squad = build_model(configs.squad.multi_squad_noans_infer, download = True)
 # Do not download the ODQA models, we've just trained it
-odqa = build_model(configs.odqa.ru_odqa_infer_wiki, download = False)
-odqa(["Что такое бронхит?"])
+#odqa = build_model(configs.odqa.ru_odqa_infer_wiki, download = False)
+#odqa(["Что такое бронхит?"])
