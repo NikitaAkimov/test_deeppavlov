@@ -9,6 +9,7 @@ model_config["dataset_reader"]["dataset_format"] = "txt"
 model_config["train"]["batch_size"] = 1000
 
 doc_retrieval = train_model(model_config)
+doc_retrieval(['Бронхит'])
 
 # Download all the SQuAD models
 #squad = build_model(configs.squad.multi_squad_noans_infer, download = True)
