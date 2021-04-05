@@ -1,4 +1,4 @@
-from deeppavlov.contrib.skills.similarity_matching_skill import SimilarityMatchingSkill
+from deeppavlov.deprecated.skills.similarity_matching_skill import SimilarityMatchingSkill
 
 faq_skill = SimilarityMatchingSkill(data_path = '/root/deepSearch_DoctorAi/test_deeppavlov/model.csv',
                               x_col_name = 'Question', 
