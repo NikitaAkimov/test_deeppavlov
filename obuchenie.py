@@ -1,5 +1,10 @@
-from deeppavlov import configs, train_model
+from deeppavlov.contrib.skills.similarity_matching_skill import SimilarityMatchingSkill
 
-faq = train_model(configs.faq.tfidf_autofaq)
-a = faq(["Что такое бронхит?"])
+faq_skill = SimilarityMatchingSkill(data_path = '/root/deepSearch_DoctorAi/test_deeppavlov/model.csv',
+                              x_col_name = 'Question', 
+                              y_col_name = 'Answer',
+                              save_load_path = './model',
+                              config_type = 'tfidf_autofaq',
+                              train = True)
+a = faq_skill(['Что такое бронхит?'], [], [])
 print(a)
