@@ -1,5 +1,10 @@
-from deeppavlov import configs
-from deeppavlov.core.commands.infer import build_model
-odqa = build_model(configs.odqa.en_odqa_infer_wiki, download = False)
-result = odqa(['Who is the Greek god of War?'])
-print(result)
+from deeppavlov.deprecated.skills.similarity_matching_skill import SimilarityMatchingSkill
+
+faq_skill = SimilarityMatchingSkill(data_path = '/content/models.csv',
+                              x_col_name = 'Question', 
+                              y_col_name = 'Answer',
+                              save_load_path = './model',
+                              config_type = 'tfidf_autofaq',
+                              train = True)
+
+print(faq_skill(['Каккие симптомы пневмонии?'], [], []))
