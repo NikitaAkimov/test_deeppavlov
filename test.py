@@ -14,4 +14,4 @@ print(faq_skill(['Каккие симптомы пневмонии?'], [], []))
 
 agent = DefaultAgent([faq_skill], skills_selector=HighestConfidenceSelector())
 
-start_model_server(agent, port=5000)
+start_model_server('/root/test_prog/model')
