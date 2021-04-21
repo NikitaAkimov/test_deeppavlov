@@ -1,9 +1,9 @@
 from deeppavlov.deprecated.skills.similarity_matching_skill import SimilarityMatchingSkill
 
-faq_skill = SimilarityMatchingSkill(data_path = '/content/models.csv',
+faq_skill = SimilarityMatchingSkill(data_path = '/root/test_prog/test_deeppavlov/models.csv',
                               x_col_name = 'Question', 
                               y_col_name = 'Answer',
-                              save_load_path = './model',
+                              save_load_path = '/root/test_prog/model',
                               config_type = 'tfidf_autofaq',
                               train = True)
 
