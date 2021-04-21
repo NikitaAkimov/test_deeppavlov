@@ -23,7 +23,7 @@ from deeppavlov import configs, train_model
 model_config = read_json(configs.faq.tfidf_autofaq)
 model_config["dataset_reader"]["data_path"] = "/root/test_prog/test_deeppavlov/models1.csv"
 model_config["dataset_reader"]["data_url"] = None
-model_config["dataset_reader"]["save_path"] = "/root/test_prog/model_test"
+model_config["dataset_reader"]["save_path"] = "/root/test_prog/model_test/data.db"
 faq = train_model(model_config)
 a = faq(["Каккие симптомы пневмонии?"])
 print(a)
