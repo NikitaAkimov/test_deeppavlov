@@ -16,6 +16,8 @@
 
 # start_model_server(model_config=agent)
 
+from deeppavlov import configs
+from deeppavlov.core.common.file import read_json
 from deeppavlov import configs, train_model
 
 model_config = read_json(configs.faq.tfidf_autofaq)
