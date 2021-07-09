@@ -16,6 +16,8 @@
 
 # start_model_server(model_config=agent)
 
+# Пример кода взят из источника - https://colab.research.google.com/github/deepmipt/dp_notebooks/blob/master/DP_autoFAQ.ipynb#scrollTo=aN-Yb8Vd4oD6
+
 from deeppavlov import configs
 from deeppavlov.core.common.file import read_json
 from deeppavlov import configs, train_model
